@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "757843972506",
+    "project_id": "sarpery-dace7",
+    "storage_bucket": "sarpery-dace7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757843972506:android:75e16482721a85bec66a23",
+        "android_client_info": {
+          "package_name": "com.example.updapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757843972506-6ekir4dqsvtm6t8ouuf39dhtrsva892n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb5g7EMBofI9LQp4sQ6u8ra_04DFHMk-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757843972506-6ekir4dqsvtm6t8ouuf39dhtrsva892n.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "757843972506-0d648b58paaja04f3dsglsrcm4gce29h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.updapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
