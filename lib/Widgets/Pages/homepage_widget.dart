@@ -72,7 +72,7 @@ class _HomePageUIState extends State<HomePageUI> {
                     height: 60,
                     width: 240,
                     child: ConstTextField(const EdgeInsets.all(8), controller: _password,
-                        iscenter: true, ispassword: true, hinttext: "Password"),
+                        iscenter: true, ispassword: true, hinttext: "Şifre"),
                   ),
 
                   //// FIREBASE AUTH GIRIS
@@ -84,12 +84,7 @@ class _HomePageUIState extends State<HomePageUI> {
                             icon: const Icon(FontAwesomeIcons.user),
                             label: const Text("Giris Yap"),
                             onPressed: () {
-                              try{
                                 FirebaseAuth.instance.signInWithEmailAndPassword(email: _email.text, password: _password.text);
-                              }catch(e){
-                                SnackBar(content: Text("Giriş yaparken bir sorunla karşılaşıldı."),backgroundColor: Colors.red,);;
-                              }
-                              SnackBar(content: Text("Başarıyla giriş yapıldı."),backgroundColor: Colors.green,);
                             })),
                   ],),
 
@@ -102,7 +97,7 @@ class _HomePageUIState extends State<HomePageUI> {
                       FirebaseAuth.instance.sendPasswordResetEmail(email: _email.text);
                     },
                     child: RichText(
-                      text: TextSpan(
+                      text: const TextSpan(
                         text: 'Şifreni ',
                         style: TextStyle(
                           fontSize: 10,
@@ -126,7 +121,7 @@ class _HomePageUIState extends State<HomePageUI> {
                         Navigator.push(context, MaterialPageRoute(builder: (context) => Register()));
                       },
                       child: RichText(
-                        text: TextSpan(
+                        text: const TextSpan(
                           text: 'Henüz aramıza katılmadın mı? Hemen bir ',
                           style: TextStyle(
                             fontSize: 10,

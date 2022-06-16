@@ -51,7 +51,7 @@ class _MainPageUIState extends State<MainPageUI> {
                                 color: Colors.black,
                                 fontWeight: FontWeight.bold),
                             child: AnimatedTextKit(
-                              animatedTexts: [WavyAnimatedText("WELCOME!")],
+                              animatedTexts: [WavyAnimatedText("HOŞGELDİNN!")],
                               repeatForever: true,
                               isRepeatingAnimation: true,
                             ),
@@ -68,7 +68,7 @@ class _MainPageUIState extends State<MainPageUI> {
                                 splashcolor: Colors.purpleAccent,
                                 icon: Icons.save,
                                 page: Saves(),
-                                text: "Saves"),
+                                text: "Kayıtlar"),
 
                             MenuCard(context,
                             containercolor: Colors.amber,
@@ -88,7 +88,7 @@ class _MainPageUIState extends State<MainPageUI> {
                                 splashcolor: Colors.amber,
                                 icon: FontAwesomeIcons.user,
                                 page: DocControlPanel(),
-                                text: "Control"))
+                                text: "Panel"))
 
                             :MenuCard(context,
                               containercolor: Colors.amber,
@@ -103,7 +103,7 @@ class _MainPageUIState extends State<MainPageUI> {
                                 splashcolor: Colors.cyan,
                                 icon: Icons.add,
                                 page: TextPage(),
-                                text: "Create"),
+                                text: "Oluştur"),
                           ],
                         ),
                       ],

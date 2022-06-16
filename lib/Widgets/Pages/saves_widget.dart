@@ -87,8 +87,8 @@ class _SavesPageUIState extends State<SavesPageUI> {
           // Eğer gelen veri 50 karakterden uzunsa sadece illk 50 karakteri çeker. //
           subtitle: (proID == curproID) ?
           ((user.text.toString().length >50) ?
-          Text(user.text.toString().substring(0,50)+"...") :
-          Text(user.text.toString())) :
+          Text(user.text.toString().substring(0,50)+"\n--"+user.createDate.toString()) :
+          Text(user.text.toString()+"\n--"+user.createDate.toString())) :
           Text(""),
 
           // Kayıtın üstüne tıklandığında düzenlemek için TextPage'e gider. //

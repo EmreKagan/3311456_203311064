@@ -30,14 +30,14 @@ Widget MainDrawer(context, ){
             SizedBox(height: 50,),
 
             ListTile(
-              title: Text("MainPage"),
+              title: Text("Anasayfa"),
               leading: Icon(FontAwesomeIcons.house,),
               tileColor: Colors.orange.withOpacity(0.3),
               onTap: ()=>Navigator.push(context, MaterialPageRoute(builder: (context) => MainPage())),
             ),
 
             ListTile(
-              title: Text("Log-Out"),
+              title: Text("Çıkış Yap"),
               leading: Icon(FontAwesomeIcons.powerOff,),
               tileColor: Colors.teal.withOpacity(0.3),
               onTap: ()=>FirebaseAuth.instance.signOut(),

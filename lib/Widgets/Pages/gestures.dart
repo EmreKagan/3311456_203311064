@@ -1,7 +1,11 @@
+import 'dart:html';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:updapp/Attributes/main_drawer.dart';
 import 'package:updapp/Attributes/whole_background.dart';
+import 'package:updapp/Widgets/Pages/gesture_page.dart';
+import 'dart:io';
 
 class Gestures extends StatefulWidget {
   const Gestures({Key? key}) : super(key: key);
@@ -14,8 +18,8 @@ class _GesturesState extends State<Gestures> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        drawer: MainDrawer(context),
         appBar: AppBar(backgroundColor: Colors.deepPurple.withOpacity(0.6),),
+        drawer: MainDrawer(context),
         body: BackG(
           child: Container(
             color: Colors.white,
@@ -24,58 +28,70 @@ class _GesturesState extends State<Gestures> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-
                   Column(
                     children: [
+
                       Divider(),
                       GestureDetector(
-                        onTap: (){
-                          print("Gulugulu");
-                        },
+                        onTap: () async {Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => GesturePage(text: "Bir kere basıldı...",)));
+                        await Future.delayed(Duration(seconds: 2));
+                            Navigator.pop(context);
+                            },
+
                         child: Container(
                           color: Colors.red,
                           child: Text("One Tap",style: TextStyle(fontSize: 5),),
-                        ),),
+                       ),),
+
                       Divider(),
                       GestureDetector(
-                        onDoubleTap: (){
-                          setState(() {
-                            print("Daha cok gulu");
-                          });
-                        },
+                        onDoubleTap: () async {Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => GesturePage(text: "İkili tıklama...",)));
+                        await Future.delayed(Duration(seconds: 2));
+                        Navigator.pop(context);
+                          },
                         child: Container(
                           color: Colors.cyan,
                           child: Text("Double Tap",style: TextStyle(fontSize: 5),),
                         ),),
+
                       Divider(),
                       GestureDetector(
-                        onLongPress: (){
-                          setState(() {
-                            print("Uzuuuuun gulugulu");
-                          });
-                        },
+                        onLongPress: ()async{Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => GesturePage(text: "Uzun basma...",)));
+                        await Future.delayed(Duration(seconds: 2));
+                        Navigator.pop(context);
+                          },
                         child: Container(
                           color: Colors.green,
                           child: Text("Long Press",style: TextStyle(fontSize: 5),),
                         ),),
+
                       Divider(),
                       GestureDetector(
-                        onHorizontalDragUpdate: (details){
-                          setState(() {
-                            print("Dikey gulugulu");
-                          });
-                        },
+                        onHorizontalDragUpdate: (details)async{Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context)=> GesturePage(text: "Y ekseninde sürüklendi...",)));
+                        await Future.delayed(Duration(seconds: 2));
+                        Navigator.pop(context);
+                          },
                         child: Container(
                           color: Colors.purpleAccent,
                           child: Text("Veritcal Drag",style: TextStyle(fontSize: 5),),
                         ),),
+
                       Divider(),
                       GestureDetector(
-                        onVerticalDragUpdate: (details){
-                          setState(() {
-                            print("Yatay gulugulu");
-                          });
-                        },
+                        onVerticalDragUpdate: (details) async {Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => GesturePage(text: "X ekseninde sürüklendi...",)));
+                        await Future.delayed(Duration(seconds: 2));
+                        Navigator.pop(context);
+                          },
                         child: Container(
                           color: Colors.orange,
                           child: Text("Horizontal Drag",style: TextStyle(fontSize: 5),),

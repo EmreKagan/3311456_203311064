@@ -71,9 +71,8 @@ class _DocControlPanelState extends State<DocControlPanel> {
       children: [
         Column(
           children: [
-            Text(user.mail.toString()),
             ListTile(
-              title:Text(user.title.toString()),
+              title:Text(user.title.toString()+"\n--"+"("+user.mail.toString()+")"),
               subtitle: Text(user.text.toString()),
 
               // Kayıtın üstüne tıklandığında düzenlemek için TextPage'e gider. //
